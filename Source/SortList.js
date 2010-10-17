@@ -6,7 +6,7 @@ var SortList = new Class({
 		sortLinks: false,
 		defaults: {
 			sortTag: null,
-			sortDirection: 1 //ascending
+			sortDirection: 1
 		}
 	},
 
@@ -77,13 +77,9 @@ var SortList = new Class({
 		});
 
 		$$(this.options.sortLinks)
-			.removeClass('active')
-			.removeClass('active-up')
-			.removeClass('active-down');
-		$$(this.options.sortLinks)
-			.filter(function(el) { return el.get('data-sorttag') == tagname; })
-			.addClass('active')
-			.addClass(sortdirection == 1 ? 'active-asc' : 'active-desc');
+			.removeClass('active').removeClass('active-asc').removeClass('active-desc');
+		$$(this.options.sortLinks).filter("[href=#"+tagname+"]")
+			.addClass('active').addClass(sortdirection == 1 ? 'active-asc' : 'active-desc');
 
 		this.current.sortTag = tagname;
 		this.current.sortDirection = sortdirection;
