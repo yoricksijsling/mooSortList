@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<title>SortList test</title>
+<script type="text/javascript" src="http://dev.sijsling.com/lib/mootools-core-1.3-full-nocompat-yc.js"></script>
+<script type="text/javascript" src="../Source/SortList.js"></script>
+<style>
+body { font-family: helvetica }
+.row { margin-bottom: 0.5em; }
+.row .title { float: left; width: 20em; }
+.row .moreinfo { float: left; }
+.clear { clear: both; }
+</style>
+<script type="text/javascript">
+document.addEvent('domready', function() {
+	new SortList({
+		elements: $$('#sortlist .row'),
+		sortLinks: $$('.sortlink')
+	}).sort('rating', 1);
+});
+</script>
+</head>
+<body>
+
+<h1>SortList test</h1>
+
+<p>
+<a href='#title' class='sortlink'>Title</a> | <a href='#rating' class='sortlink'>Rating</a> | <a href='#release' class='sortlink'>Release</a> | <a href='#gross' class='sortlink'>Gross</a>
+</p>
+
+<div id='sortlist'>
+<div class='row' data-title="The Shawshank Redemption" data-rating="9.2" data-release="19940923" data-gross="28341469">
+	<div class='title'>The Shawshank Redemption</div>
+	<div class='moreinfo'>Rating: 9.2<br />Released 23 September 1994<br />$28,341,469 (USA)</div>	
+	<div class='clear'></div>
+</div>
+<div class='row' data-title="The Godfather" data-rating="9.2" data-release="19720324" data-gross="134966411">
+	<div class='title'>The Godfather</div>
+	<div class='moreinfo'>Rating: 9.2<br />Released 24 March 1972<br />$134,966,411 (USA)</div>
+	<div class='clear'></div>
+</div>
+<div class='row' data-title="The Godfather: Part II" data-rating="9.0" data-release="19741220" data-gross="57300000">
+	<div class='title'>The Godfather: Part II</div>
+	<div class='moreinfo'>Rating: 9.0<br />Released 20 December 1974<br />$57,300,000 (USA)</div>
+	<div class='clear'></div>
+</div>
+<div class='row' data-title="Inception" data-rating="9.1" data-release="20100716" data-gross="289183607">
+	<div class='title'>Inception</div>
+	<div class='moreinfo'>Rating: 9.1<br />Released 16 July 2010<br />$289,183,607</div>
+	<div class='clear'></div>
+</div>
+<div class='row' data-title="Il buono, il brutto, il cattivo" data-rating="9.0" data-release="19671229" data-gross="19000000">
+	<div class='title'>Il buono, il brutto, il cattivo</div>
+	<div class='moreinfo'>Rating: 9.0<br />Released 29 December 1967<br />$19,000,000</div>
+	<div class='clear'></div>
+</div>
+<div class='row' data-title="Pulp fiction" data-rating="8.9" data-release="19940923" data-gross="48407201">
+	<div class='title'>Pulp fiction</div>
+	<div class='moreinfo'>Rating: 8.9<br />Released 23 September 1994<br /> $48,407,201</div>
+	<div class='clear'></div>
+</div>
+</div>
+
+</body>
+</html>
