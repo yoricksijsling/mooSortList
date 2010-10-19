@@ -4,12 +4,17 @@
 <title>SortList test</title>
 <script type="text/javascript" src="http://dev.sijsling.com/lib/mootools-core-1.3-full-nocompat-yc.js"></script>
 <script type="text/javascript" src="../Source/SortList.js"></script>
+<script type="text/javascript" src="http://dev.sijsling.com/lib/Array.stableSort.js"></script>
 <style>
 body { font-family: helvetica }
 .row { margin-bottom: 0.5em; }
 .row .title { float: left; width: 20em; }
 .row .moreinfo { float: left; }
 .clear { clear: both; }
+.sortlink.active { padding-right: 14px; background-position: center right; background-repeat: no-repeat; }
+.sortlink.active-asc { background-image: url('asc.gif'); }
+.sortlink.active-desc { background-image: url('desc.gif'); }
+
 </style>
 <script type="text/javascript">
 document.addEvent('domready', function() {
